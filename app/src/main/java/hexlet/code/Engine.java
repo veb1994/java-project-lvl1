@@ -24,16 +24,12 @@ public class Engine {
     }
     public static void playGame(GameTemplate game) {
         boolean isGameOver = false;
-        String question;
-        String playerAnswer;
-        String correctAnswer;
+        String question, playerAnswer, correctAnswer;
         int correctAnswerCount = 0;
         final int correctAnswersToWin = 3;
-
         String playerName = Cli.greetUser();
         Scanner sc = new Scanner(System.in);
         System.out.println(game.getGameRules());
-
         while (!isGameOver) {
             String[] questionAndAnswer = game.getQuestionAndAnswer();
             question = questionAndAnswer[0];
