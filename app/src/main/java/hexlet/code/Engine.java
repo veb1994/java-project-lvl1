@@ -1,9 +1,11 @@
 package hexlet.code;
 
 import hexlet.code.games.Calc;
-import hexlet.code.games.Cli;
 import hexlet.code.games.Even;
+import hexlet.code.games.Cli;
+import hexlet.code.games.GCD;
 import hexlet.code.games.GameTemplate;
+
 import java.util.Scanner;
 
 public class Engine {
@@ -18,13 +20,18 @@ public class Engine {
         } else if (gameNumber.equals("3")) {
             game = new Calc(maxNumber);
             playGame(game);
+        } else if (gameNumber.equals("4")) {
+            game = new GCD(maxNumber);
+            playGame(game);
         } else {
             System.out.println("There is no game as " + gameNumber);
         }
     }
     public static void playGame(GameTemplate game) {
         boolean isGameOver = false;
-        String question, playerAnswer, correctAnswer;
+        String question;
+        String playerAnswer;
+        String correctAnswer;
         int correctAnswerCount = 0;
         final int correctAnswersToWin = 3;
         String playerName = Cli.greetUser();
@@ -41,7 +48,8 @@ public class Engine {
                 System.out.println("Correct!");
                 correctAnswerCount += 1;
             } else {
-                System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
+                System.out.println("'" + playerAnswer
+                        + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
                 System.out.println("Let's try again, " + playerName + "!");
                 isGameOver = true;
             }
