@@ -4,5 +4,4 @@
 
 Even game example: https://asciinema.org/a/525185 <br />
 Calc game example: https://asciinema.org/a/525366 <br />
-GCD game example <br />
-<script id="asciicast-525569" src="https://asciinema.org/a/525569.js" async></script>
+GCD game example: https://asciinema.org/a/525569 <br />
