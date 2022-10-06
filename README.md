@@ -6,3 +6,4 @@ Even game demo: https://asciinema.org/a/525185 <br />
 Calc game demo: https://asciinema.org/a/525366 <br />
 GCD game demo: https://asciinema.org/a/525569 <br />
 Progression game demo: https://asciinema.org/a/526056 <br />
+Prime game demo: https://asciinema.org/a/526074 <br />

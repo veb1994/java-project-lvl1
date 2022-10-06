@@ -20,8 +20,11 @@ public class Engine {
             game = new GCD(maxNumber);
             playGame(game);
         } else if (gameNumber.equals("5")) {
-                game = new Progression(maxNumber);
-                playGame(game);
+            game = new Progression(maxNumber);
+            playGame(game);
+        } else if (gameNumber.equals("6")) {
+            game = new Prime(maxNumber);
+            playGame(game);
         } else {
             System.out.println("There is no game as " + gameNumber);
         }
