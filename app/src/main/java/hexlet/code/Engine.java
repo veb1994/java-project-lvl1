@@ -1,10 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.Calc;
-import hexlet.code.games.Even;
-import hexlet.code.games.Cli;
-import hexlet.code.games.GCD;
-import hexlet.code.games.GameTemplate;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 
@@ -23,6 +19,9 @@ public class Engine {
         } else if (gameNumber.equals("4")) {
             game = new GCD(maxNumber);
             playGame(game);
+        } else if (gameNumber.equals("5")) {
+                game = new Progression(maxNumber);
+                playGame(game);
         } else {
             System.out.println("There is no game as " + gameNumber);
         }
