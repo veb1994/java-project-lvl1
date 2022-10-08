@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import java.util.Random;
 
-public class Even implements GameTemplate {
+public final class Even implements GameTemplate {
     private final int maxNumber;
     private String correctAnswer;
     public Even(int maxRandomNumber) {

@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import java.util.Random;
 
-public class Prime implements GameTemplate {
+public final class Prime implements GameTemplate {
     private final int maxNumber;
     private String correctAnswer;
     public Prime(int maxRandomNumber) {
@@ -18,11 +18,11 @@ public class Prime implements GameTemplate {
         int number = generator.nextInt(maxNumber);
         if (number < 2) {
             correctAnswer = "no";
-        } else if (number == 2 || number == 3) {
+        } else if (number == 2) {
             correctAnswer = "yes";
         } else {
             correctAnswer = "yes";
-            for (var i = 2; i <= number / 2; i++) {
+            for (var i = 2; i < number; i++) {
                 if (number % i == 0) {
                     correctAnswer = "no";
                     break;

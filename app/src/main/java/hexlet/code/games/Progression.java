@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import java.util.Random;
 
-public class Progression implements GameTemplate {
+public final class Progression implements GameTemplate {
     private final int maxNumber;
     private final int minProgressionLength = 5;
     private final int maxProgressionLength = 10;

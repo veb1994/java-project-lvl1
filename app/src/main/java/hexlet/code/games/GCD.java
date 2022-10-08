@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import java.util.Random;
 
-public class GCD implements GameTemplate {
+public final class GCD implements GameTemplate {
     private final int maxNumber;
     private String correctAnswer;
     public GCD(int maxRandomNumber) {

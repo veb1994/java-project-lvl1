@@ -2,9 +2,10 @@ package hexlet.code.games;
 
 import java.util.Random;
 
-public class Calc implements GameTemplate {
+public final class Calc implements GameTemplate {
     private final int maxNumber;
     private String correctAnswer;
+    private final int divisor = 3;
     public Calc(int maxRandomNumber) {
         this.maxNumber = maxRandomNumber;
     }
@@ -19,13 +20,13 @@ public class Calc implements GameTemplate {
         int number2 = generator.nextInt(maxNumber);
         int operator = generator.nextInt(maxNumber);
         String[] operators = {" + ", " - ", " * "};
-        if (operator < maxNumber / 3) {
+        if (operator < maxNumber / divisor) {
             correctAnswer = Integer.toString(number1 + number2);
             operator = 0;
-        } else if ((operator >= maxNumber / 3) && (operator <= maxNumber * 2 / 3)) {
+        } else if ((operator >= maxNumber / divisor) && (operator <= maxNumber * 2 / divisor)) {
             correctAnswer = Integer.toString(number1 - number2);
             operator = 1;
-        } else if (operator > maxNumber * 2 / 3) {
+        } else if (operator > maxNumber * 2 / divisor) {
             correctAnswer = Integer.toString(number1 * number2);
             operator = 2;
         }
